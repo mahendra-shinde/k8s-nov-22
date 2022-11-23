@@ -18,3 +18,10 @@
 	mv config config.old
 	mv credentials.yml config
 	```
+
+1.	Test the connectivity using:
+
+	```
+	kubectl cluster-info
+	kubectl get nodes
+	```
