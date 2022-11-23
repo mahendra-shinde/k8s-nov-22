@@ -1,7 +1,6 @@
 # Connect to Azure Kubernetes Service (AKS)
 
-1. Download the cluster credentials files 
-	`https://raw.githubusercontent.com/mahendra-shinde/k8s-nov-22/main/config/credentials.yml`
+1. Download the cluster [credentials](https://raw.githubusercontent.com/mahendra-shinde/k8s-nov-22/main/config/credentials.yml) files 
 
 1. Copy the file inside kube-config directory.
 
