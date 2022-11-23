@@ -25,3 +25,20 @@
 	kubectl cluster-info
 	kubectl get nodes
 	```
+
+## Kubectl : Kubernetes Client
+
+* General Syntax for kubectl
+
+	```
+	kubectl [VERB] [ObjectType] [ObjectName] [OptionalSwitches]
+	kubectl [OptionalSwitches] [VERB] [ObjectType] [ObjectName] 
+	```
+
+* kubectl examples
+
+	```
+	kubectl get nodes
+	kubectl top nodes
+	kubectl describe node aks-agentpool-57777951-vmss000000
+	```
