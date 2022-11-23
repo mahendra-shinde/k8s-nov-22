@@ -42,3 +42,26 @@
 	kubectl top nodes
 	kubectl describe node aks-agentpool-57777951-vmss000000
 	```
+
+## Start with dedicated namespace
+
+1.	Create namespace with YOURNAME 
+
+	> Replace YOURNAME with actaul name in "lowercase"
+
+	```
+	kubectl create namespace YOURNAME
+	```
+
+1. 	Update current context and add namespace YOURNAME
+
+	```
+	kubectl config set-context --current --namespace=YOURNAME
+	kubectl get pod
+	```
+
+1.	Get resources from "Other Namespace"
+
+	```
+	kubectl get po -n ANOTHER_NAMESPACE
+	```
