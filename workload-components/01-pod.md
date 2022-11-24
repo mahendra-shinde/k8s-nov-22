@@ -26,3 +26,28 @@
 	kubectl get pod -l app=myapp1
 	kubectl delete pod -l app=myapp1,version=1.1.2
 	```
+
+1.	Kubernetes DO NOT RECOMMEND independent pods, instead POD must be Managed by another object.
+
+	- ReplicaSet	
+		
+		Group of Pods with same template, provides scalability.
+		Faster Creation and Deletion of Pods.
+		Every new pod is given a new identity and Ip address.
+
+	- StatefulSet
+
+		Group of Pods with same template, provides scalability
+		Slower creation/deletion compared to ReplicaSet
+		New pod gets the Identity of its older sibling. (IP Address still new !)
+
+	
+	- DaemonSet
+
+		Group of Pods with same template, scaling pod requires scaling nodes !
+		One pod per Node !!!
+
+	- Job
+
+		Single Task or Group of Task
+		Pod created by Job, will be deleted after the JOB is completed.
