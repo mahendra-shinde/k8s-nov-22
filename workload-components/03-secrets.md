@@ -40,7 +40,7 @@ kubectl describe secret reg-secret
 - Generic Secret is injected as Environment Variables
 
 	```yaml
-		envFrom:
-			- secretRef:
-				name: mysecrets
+	  envFrom:
+	    - secretRef:
+	      name: mysecrets
 	```
