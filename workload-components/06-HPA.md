@@ -70,7 +70,7 @@ kubectl describe hpa
 kubectl delete -f 06-HPA.yml
 ```
 
-## HOA v2 Demo
+## HPA v2 Demo
 
 ```
 kubectl apply -f 06-HPA-v2.yml
