@@ -1,0 +1,11 @@
+## TWO YAML Objects in Single YAML file !!!
+person:
+  firstName: mahendra
+  lastName: Shinde
+
+## Seperator !
+---
+
+dev-env:
+  Langauage: Java
+  Framework: Spring

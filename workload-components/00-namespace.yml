@@ -1,0 +1,4 @@
+apiVersion: v1          # API Version
+kind: Namespace         # Type of Object
+metadata:               # Object Metadata
+  name: dev-mahendra
