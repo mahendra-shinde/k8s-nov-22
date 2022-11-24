@@ -1,12 +1,16 @@
 # Kubernetes Secrets
 
 - Similar to ConfigMap, used for storing environment variables or configuration for application.
-- Value are `Base64` encoded, when `Passes to Containers` kubernetes will Decode them.
+- Value are `Base64` encoded, when `Passed to Containers` kubernetes will Decode them.
 - Secrets are of THREE types
 
-	1. Generic Secret:		Just like ConfigMaps, Key/Value pairs
-	2. Docker Registry:		Special secret that contains registry credentials
-	3. TLS:					Digital Certificates
+	Kind | Description
+ 	--------------|---------------------------
+	Generic Secret | Just like ConfigMaps, Key/Value pairs
+	Docker Registry | Special secret that contains registry credentials
+	TLS | Digital Certificates
+	
+	
 
 ## Generic Secret from Kubectl Command
 
