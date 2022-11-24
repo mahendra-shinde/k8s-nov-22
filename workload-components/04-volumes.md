@@ -1,13 +1,15 @@
 ## Kubernetes Storage /  Volume
 
 Two Kinds Volumes / Storage in Kubernetes
-1. Local Volumes used for temparory file-system. Can be accessed from multiple nodes
+
+1. Local Volumes used for temporary file-system. Can be accessed from multiple nodes
+
 1. Persistent Volumes, are external storage services. Has 4 Access modes:
 
-	- ReadWriteOnce [RWO]
-	- ReadWriteMany [RWX]
-	- ReadOnlyMany  [ROX]
-	- ReadWriteOncePod [RWOP]
+    - ReadWriteOnce [RWO]
+    - ReadWriteMany [RWX]
+    - ReadOnlyMany  [ROX]
+    - ReadWriteOncePod [RWOP]
 
 1. Local Volumes
 
