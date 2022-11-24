@@ -71,3 +71,14 @@ kubectl delete -f 06-HPA.yml
 ```
 
 ## HOA v2 Demo
+
+```
+kubectl apply -f 06-HPA-v2.yml
+kubectl get pods
+kubectl get hpa
+kubectl scale rs/set3 --replicas=3
+kubectl get hpa
+kubectl get pods
+```
+
+> Official Docs : https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/ 
