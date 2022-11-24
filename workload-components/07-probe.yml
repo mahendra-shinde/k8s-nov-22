@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-7
+  labels:
+    name: myapp
+spec:
+  containers:
+  - name: myapp
+    image: mahendrshinde/myweb:1
+    livenessProbe:
+      httpGet:
+        path: /
+        port: 80
+        scheme: HTTP
+      periodSeconds: 30             # Time gap between TWO probes
+      failureThreshold: 3           # 3 Consecutive failures will mark pod as Failed
+      initialDelaySeconds: 30       # Do not start probe for FIRST 30 Seconds
+      timeoutSeconds: 10            # Probe will wait for 10 seconds to get response 
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 80
