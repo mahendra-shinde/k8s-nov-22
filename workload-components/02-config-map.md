@@ -2,6 +2,7 @@
 
 - Objects that stores Environment Variables / Configuration for pods
 - Multiple Pods can share same configMap
+- Limitation:  Everytime, config-map is `updated`, all the pods need to be `recreated`
 
 ## Demo
 
