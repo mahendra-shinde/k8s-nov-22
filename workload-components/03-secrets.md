@@ -23,7 +23,24 @@ kubectl get secret mysecrets -o yaml
 ## Docker Registry Secret
 
 ```
-kubectl create secret docker-registry reg-secret --docker.username=mahendrashinde --docker.password=fcPeunDVr+ii1Y3xr+5d5gluVJH4w1Tg --docker.server=mahendrashinde.azurecr.io
+kubectl create secret docker-registry reg-secret --docker-username=mahendrashinde --docker-password=fcPeunDVr+ii1Y3xr+5d5gluVJH4w1Tg --docker-server=mahendrashinde.azurecr.io
 
 kubectl describe secret reg-secret
 ```
+
+## Pod that uses both secrets
+
+- Registry Secret is injected as follows:
+
+	```yaml
+	imagePullSecrets:
+	- name: reg-secret
+	```
+
+- Generic Secret is injected as Environment Variables
+
+	```yaml
+		envFrom:
+			- secretRef:
+				name: mysecrets
+	```
