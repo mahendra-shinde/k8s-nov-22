@@ -38,6 +38,27 @@ curl http://localhost:8080/
 kubectl delete -f 08-deploy1.yml
 ```
 
+## Update Strategy
+
+- Deployment object has TWO update strategies:
+
+1. recreate [Default]
+
+	Terminate ALL the pods of OLD replicaset and Then create pods in NEW replicaset.
+	Minimal downtime observed.
+
+2.	rollingUpdate
+
+	Terminate OLD pods in batches (default batch size : 1) and deploy NEW pods as well.
+	Repeat the process till OLR replicaSet is set to ZERO.
+
+	```yml
+	  strategy:
+	    rollingUpdate:
+	    maxSurge: 1       ## Temp Scale UP by 1 Instance ## replicas would be 3
+	    maxUnavailable: 2 ## Take TWO pods down each time ! / Default is 1
+	```
+
 
 
 
