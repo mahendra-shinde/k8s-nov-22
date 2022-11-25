@@ -72,3 +72,35 @@ Kubernetes has THREE types of services:
 	curl http://my-app
 	exit
 	```
+
+1.	Clean Up 
+
+	```
+	kubectl delete -f 09-service-cluster-ip.yml
+	```
+
+## NodePort Service Demo
+
+1.	Deploy the service and deployment
+
+	```
+	kubectl apply -f 09-service-node-port.yml
+	kubectl get po,svc,deploy
+	kubectl describe ep my-app	## List all endpoints (backend-pods)
+	```
+
+1.	Test the NodePort service:
+
+	```
+	$PODNAME=$(kubectl get po -l app=app2 -o=jsonpath="{ .items[0].metadata.name }")
+	kubectl get node -o wide
+	## Find the IP Address of first node
+	## Replace $NODEIP with IP Address of first
+	kubectl exec -it $PODNAME -- curl http://$NODEIP:30001
+	```
+
+1.	Clean Up 
+
+	```
+	kubectl delete -f 09-service-cluster-ip.yml
+	```
